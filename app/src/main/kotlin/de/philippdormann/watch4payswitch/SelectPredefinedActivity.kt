@@ -1,4 +1,4 @@
-package de.bigboot.gw4remap
+package de.philippdormann.galaxywatchremap
 
 import android.app.Activity
 import android.content.Intent
@@ -10,7 +10,7 @@ import android.view.View
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.RecyclerView
 import androidx.wear.widget.WearableLinearLayoutManager
-import de.bigboot.gw4remap.databinding.ActivitySelectPredefinedBinding
+import de.philippdormann.galaxywatchremap.databinding.ActivitySelectPredefinedBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext

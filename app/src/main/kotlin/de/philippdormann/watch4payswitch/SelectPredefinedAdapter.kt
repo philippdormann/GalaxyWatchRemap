@@ -1,10 +1,10 @@
-package de.bigboot.gw4remap
+package de.philippdormann.galaxywatchremap
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import de.bigboot.gw4remap.databinding.ActivitySelectPredefinedItemBinding
+import de.philippdormann.galaxywatchremap.databinding.ActivitySelectPredefinedItemBinding
 
 class SelectPredefinedAdapter(items: List<Item>): RecyclerView.Adapter<SelectPredefinedAdapter.ViewHolder>() {
     var items: List<Item> = items

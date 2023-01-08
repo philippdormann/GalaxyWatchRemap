@@ -12,7 +12,7 @@ android {
     compileSdk = 31
 
     defaultConfig {
-        applicationId = "de.bigboot.gw4remap"
+        applicationId = "de.philippdormann.galaxywatchremap"
         minSdk = 30
         targetSdk = 31
         versionCode = 2001

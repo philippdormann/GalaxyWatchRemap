@@ -1,11 +1,11 @@
-package de.bigboot.gw4remap
+package de.philippdormann.galaxywatchremap
 
 import android.content.Intent
 import android.os.Bundle
 import android.provider.Settings
 import android.view.View
 import androidx.fragment.app.FragmentActivity
-import de.bigboot.gw4remap.databinding.ActivityMainBinding
+import de.philippdormann.galaxywatchremap.databinding.ActivityMainBinding
 import java.util.*
 
 

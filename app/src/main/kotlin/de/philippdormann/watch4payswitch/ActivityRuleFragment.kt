@@ -1,4 +1,4 @@
-package de.bigboot.gw4remap
+package de.philippdormann.galaxywatchremap
 
 import android.annotation.SuppressLint
 import android.app.Activity
@@ -11,7 +11,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.activity.result.contract.ActivityResultContract
 import androidx.core.widget.doOnTextChanged
-import de.bigboot.gw4remap.databinding.FragmentActivityRuleBinding
+import de.philippdormann.galaxywatchremap.databinding.FragmentActivityRuleBinding
 import java.lang.IndexOutOfBoundsException
 import java.util.*
 

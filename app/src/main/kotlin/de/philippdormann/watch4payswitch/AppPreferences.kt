@@ -1,4 +1,4 @@
-package de.bigboot.gw4remap
+package de.philippdormann.galaxywatchremap
 
 import android.content.Context
 import androidx.core.content.edit

@@ -1,4 +1,4 @@
-package de.bigboot.gw4remap
+package de.philippdormann.galaxywatchremap
 
 import android.accessibilityservice.AccessibilityService
 import android.content.Intent
