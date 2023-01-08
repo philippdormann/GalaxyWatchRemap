@@ -3,7 +3,7 @@ import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
 plugins {
     id("com.android.application")
     id("kotlin-android")
-    id("com.google.devtools.ksp").version("1.6.10-1.0.2")
+    id("com.google.devtools.ksp").version("1.6.21-1.0.6")
 }
 
 val properties = gradleLocalProperties(rootDir)
@@ -15,8 +15,8 @@ android {
         applicationId = "de.philippdormann.galaxywatchremap"
         minSdk = 30
         targetSdk = 33
-        versionCode = 2001
-        versionName = "2.0.0-alpha1"
+        versionCode = 200
+        versionName = "2.0.0"
 
     }
 
@@ -55,8 +55,8 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.5.1")
     implementation("com.google.android.material:material:1.7.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    implementation("com.squareup.moshi:moshi-kotlin:1.13.0") {
+    implementation("com.squareup.moshi:moshi-kotlin:1.14.0") {
         exclude("org.jetbrains.kotlin", "kotlin-reflect ")
     }
-    ksp("com.squareup.moshi:moshi-kotlin-codegen:1.13.0")
+    ksp("com.squareup.moshi:moshi-kotlin-codegen:1.14.0")
 }
