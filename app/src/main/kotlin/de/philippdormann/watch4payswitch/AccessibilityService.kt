@@ -36,8 +36,12 @@ class AccessibilityService : AccessibilityService() {
                         val line = String(buffer, 0, read)
                         Log.d(AccessibilityService::class.simpleName, String(buffer, 0, read))
                         when {
+                            line.contains("stemPrimaryDoublePressAction") -> onActivitySource(ActivitySource.BUTTON_BACK_DOUBLE)
+                            line.contains("stemPrimaryTriplePressAction") -> onActivitySource(ActivitySource.BUTTON_BACK_TRIPLE)
                             line.contains("stemPrimaryLongPress") -> onActivitySource(ActivitySource.BUTTON_BACK_LONGPRESS)
+                            line.contains("backLongPress") ->onActivitySource(ActivitySource.BUTTON_BACK_LONGPRESS)
                             line.contains("powerLongPress") ->onActivitySource(ActivitySource.BUTTON_POWER_LONGPRESS)
+                            line.contains("powerVeryLongPress") ->onActivitySource(ActivitySource.BUTTON_POWER_VERYLONGPRESS)
                             else -> {}
                         }
                     }
