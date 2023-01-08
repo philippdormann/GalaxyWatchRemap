@@ -24,7 +24,7 @@ class AccessibilityService : AccessibilityService() {
 
         logcatWatcher = GlobalScope.launch(Dispatchers.IO) {
             Runtime.getRuntime()
-                .exec(arrayOf("logcat", "-T", "1", "-b", "system", "-e", "stemPrimaryLongPress|powerLongPress"))
+                .exec(arrayOf("logcat", "-T", "1", "-b", "system", "-e", "stemPrimaryLongPress|powerLongPress|powerVeryLongPress|stemPrimaryTriplePressAction|stemPrimaryDoublePressAction"))
                 .inputStream
                 .use { reader ->
                     Log.d(AccessibilityService::class.simpleName, "watching logcat started...")
@@ -39,7 +39,6 @@ class AccessibilityService : AccessibilityService() {
                             line.contains("stemPrimaryDoublePressAction") -> onActivitySource(ActivitySource.BUTTON_BACK_DOUBLE)
                             line.contains("stemPrimaryTriplePressAction") -> onActivitySource(ActivitySource.BUTTON_BACK_TRIPLE)
                             line.contains("stemPrimaryLongPress") -> onActivitySource(ActivitySource.BUTTON_BACK_LONGPRESS)
-                            line.contains("backLongPress") ->onActivitySource(ActivitySource.BUTTON_BACK_LONGPRESS)
                             line.contains("powerLongPress") ->onActivitySource(ActivitySource.BUTTON_POWER_LONGPRESS)
                             line.contains("powerVeryLongPress") ->onActivitySource(ActivitySource.BUTTON_POWER_VERYLONGPRESS)
                             else -> {}

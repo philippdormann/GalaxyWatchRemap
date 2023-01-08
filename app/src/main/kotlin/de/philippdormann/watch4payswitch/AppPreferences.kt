@@ -15,6 +15,7 @@ enum class ActivitySource(val text: Int)
 {
     BUTTON_POWER_LONGPRESS(R.string.source_power_longpress),
     BUTTON_BACK_LONGPRESS(R.string.source_back_longpress),
+    BUTTON_BACK_DOUBLE(R.string.source_back_doubleclick),
 }
 
 @JsonClass(generateAdapter = true)
@@ -57,10 +58,11 @@ class AppPreferences(context: Context) {
             }
             .toMutableList()
             .apply {
-                if(size != 2 || none { it.source == ActivitySource.BUTTON_POWER_LONGPRESS } || none { it.source == ActivitySource.BUTTON_BACK_LONGPRESS }) {
+                if(size != 3 || none { it.source == ActivitySource.BUTTON_POWER_LONGPRESS } || none { it.source == ActivitySource.BUTTON_BACK_LONGPRESS } || none { it.source == ActivitySource.BUTTON_BACK_DOUBLE }) {
                     clear()
                     add(ActivityRule(ActivitySource.BUTTON_POWER_LONGPRESS, PredefinedTargets.GOOGLE_ASSISTANT, enabled = true ))
                     add(ActivityRule(ActivitySource.BUTTON_BACK_LONGPRESS, PredefinedTargets.GOOGLE_WALLET, enabled = true ))
+                    add(ActivityRule(ActivitySource.BUTTON_BACK_DOUBLE, PredefinedTargets.GOOGLE_FIT, enabled = true ))
                     saveRules(this)
                 }
             }
@@ -106,6 +108,12 @@ object PredefinedTargets {
         "com.google.commerce.tapandpay.wear.cardlist.WalletThemedWearCardListActivity",
         name = R.string.target_google_wallet
     )
+    
+    val GOOGLE_FIT = ActivityTarget(
+        "com.google.android.apps.fitness",
+        "com.google.android.wearable.fitness.realtime.workouts.picker.ChooseWorkoutQuickAccessActivity",
+        name = R.string.target_google_fit
+    )
 
     val GOOGLE_ASSISTANT = ActivityTarget(
         "com.google.android.wearable.assistant",
@@ -126,7 +134,7 @@ object PredefinedTargets {
         name = R.string.target_ultimate_alexa
     )
 
-    val ALL = listOf(GOOGLE_WALLET, GOOGLE_ASSISTANT, GOOGLE_ASSISTANT_GO, ULTIMATE_ALEXA)
+    val ALL = listOf(GOOGLE_WALLET, GOOGLE_FIT, GOOGLE_ASSISTANT, GOOGLE_ASSISTANT_GO, ULTIMATE_ALEXA)
 }
 
 fun Context.getAppPreferences() = AppPreferences(this)

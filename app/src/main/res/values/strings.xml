@@ -7,6 +7,7 @@
 
     <string name="predefined_targets">Predefined targets</string>
 
+    <string name="target_google_fit">Google Fit</string>
     <string name="target_google_wallet">Google Wallet</string>
     <string name="target_google_assistant">Google Assistant</string>
     <string name="target_google_assistant_go">Google Assistant Go</string>
@@ -14,6 +15,7 @@
 
     <string name="source_power_longpress">Power Button Long-Press</string>
     <string name="source_back_longpress">Back Button Long-Press</string>
+    <string name="source_back_doubleclick">Back Button Double Click</string>
 
     <string name="activity_source">Source</string>
     <string name="activity_target">Target</string>
