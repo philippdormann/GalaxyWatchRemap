@@ -9,12 +9,12 @@ plugins {
 val properties = gradleLocalProperties(rootDir)
 
 android {
-    compileSdk = 31
+    compileSdk = 33
 
     defaultConfig {
         applicationId = "de.philippdormann.galaxywatchremap"
         minSdk = 30
-        targetSdk = 31
+        targetSdk = 33
         versionCode = 2001
         versionName = "2.0.0-alpha1"
 
@@ -44,16 +44,16 @@ android {
 }
 
 dependencies {
-    implementation("com.google.android.gms:play-services-wearable:17.1.0")
-    implementation("androidx.core:core-ktx:1.8.0")
+    implementation("com.google.android.gms:play-services-wearable:18.0.0")
+    implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.wear:wear:1.2.0")
     implementation("androidx.percentlayout:percentlayout:1.0.0")
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
     implementation("androidx.recyclerview:recyclerview:1.2.1")
-    implementation("androidx.activity:activity-ktx:1.4.0")
-    implementation("androidx.fragment:fragment-ktx:1.4.1")
-    implementation("androidx.appcompat:appcompat:1.4.2")
-    implementation("com.google.android.material:material:1.6.1")
+    implementation("androidx.activity:activity-ktx:1.6.1")
+    implementation("androidx.fragment:fragment-ktx:1.5.5")
+    implementation("androidx.appcompat:appcompat:1.5.1")
+    implementation("com.google.android.material:material:1.7.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("com.squareup.moshi:moshi-kotlin:1.13.0") {
         exclude("org.jetbrains.kotlin", "kotlin-reflect ")
