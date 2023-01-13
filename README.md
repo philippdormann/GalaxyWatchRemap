@@ -1,6 +1,6 @@
 # GalaxyWatchRemap
 > ❗ Work In Progress
-GalaxyWatchRemap allows you remap the hardware buttons on the Galaxy Watch 4 & Galaxy Watch 5.
+GalaxyWatchRemap allows you to remap the hardware buttons on the Galaxy Watch 4 & Galaxy Watch 5.
 
 ## Why
 Samsung does not let you fully remap buttons by default
